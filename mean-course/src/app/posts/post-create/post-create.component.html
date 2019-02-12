@@ -1,0 +1,33 @@
+<mat-card >
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm" class='mForm1'>
+      <mat-form-field>
+          <input
+            matInput type="text"
+            name="enteredTitle"
+            ngModel
+            required
+            minlength="3"
+            placeholder = "Title"
+             #enteredTitle="ngModel"> <!-- (for ngModel)Don't have to do two way binding if within a form-->
+          <mat-error *ngIf="enteredTitle.invalid">Please enter a post title</mat-error>
+      </mat-form-field>
+        <mat-form-field class='contentForm'>
+          <textarea
+            matInput rows ="6"
+            name = "enteredContent"
+            ngModel
+            required
+            placeholder = "Content"
+            #enteredContent="ngModel">
+          </textarea>
+          <mat-error *ngIf="enteredContent.invalid">Please enter some content</mat-error>
+        </mat-form-field>
+        <button
+            mat-raised-button
+            type="submit">Save post
+        </button>
+  </form>
+</mat-card>
+<hr>
+
+

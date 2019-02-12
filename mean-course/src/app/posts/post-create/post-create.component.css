@@ -1,0 +1,24 @@
+.contentForm{
+  padding-bottom: 20px;
+}
+
+mat-card{
+height:300px;
+}
+
+mat-form-field{
+  width: 100%;
+  background-color: rgb(254, 180, 144)
+}
+
+textarea{
+  width: 100%;
+  background-color: rgb(254, 212, 164)
+}
+
+button{
+  background-color : gold;
+  color : white;
+}
+
+
